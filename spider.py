@@ -1,9 +1,10 @@
 import re
 import hashlib
 import requests
+import config
 
-username = '学号'
-password = '密码'
+username = config.JW_USERNAME
+password = config.JW_PASSWORD
 home_url = 'http://219.223.252.46:9001/login.do'
 login_url = 'http://219.223.252.46:9001/j_acegi_login.do'
 socre_url = 'http://219.223.252.46:9001/cjgl.v_allcj_yjs.do'

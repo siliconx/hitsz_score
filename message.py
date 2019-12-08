@@ -1,13 +1,14 @@
 import smtplib
 from email.message import EmailMessage
+import config
 
 # 第三方 SMTP 服务
-mail_host='smtp.qq.com'  # 设置smtp服务器
-mail_user='abc@qq.com'  # 发送邮箱
-mail_pass='xxx'  # 客户端授权码, 非普通登录密码
+mail_host = config.EMAIL_HOST
+mail_user = config.EMAIL_USERNAME
+mail_pass = config.EMAIL_PASSWORD
 
 sender = mail_user
-receivers = ['xxx@163.com']  # 接收邮箱
+receivers = config.EMAIL_RECEIVERS
 
 def send(text):
     msg = EmailMessage()
