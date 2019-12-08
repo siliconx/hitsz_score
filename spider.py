@@ -48,7 +48,6 @@ def get_score():
     if score_list_str:
         score_list_str = score_list_str.group(1)
         result = eval(score_list_str)  # 把字符串中的list转为python的list对象
-        return result
     else:
         print('提取成绩列表失败')
-        return result
+    return result
