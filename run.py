@@ -1,3 +1,4 @@
+import sys
 import time
 import spider
 import message
@@ -24,6 +25,8 @@ def run():
             my_sleep(60)
         else:
             my_sleep(5)
+        # 及时输出log
+        sys.stdout.flush()
 
 def my_sleep(t):
     """防止sleep太长时间，进程被杀."""
