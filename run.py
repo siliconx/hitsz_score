@@ -6,9 +6,14 @@ import message
 scores_set = set()  # 记录已通知过的所有课程的课程号
 def run():
     print('running...')
+    day = 0
     while True:
         t = time.localtime()
         if t.tm_hour > 6 and t.tm_min % 10 == 0:  # 每天早上7点开始，每10分钟查一次
+            if day != t.tm_mday:
+                day = t.tm_mday
+                print('good morning!')
+
             scores = spider.get_score()  # 爬取成绩
             needs_inform = []  # 记录需要通知的课程
             for s in scores:
