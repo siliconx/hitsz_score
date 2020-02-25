@@ -36,7 +36,7 @@ def run():
 def my_sleep(t):
     """防止sleep太长时间，进程被杀."""
     for i in range(t):
-        time.sleep(i)
+        time.sleep(1)
 
 if __name__ == '__main__':
     run()
